@@ -1,0 +1,9 @@
+LIBRARY	"TestCounter"
+EXPORTS
+    PerftestOpen          @1
+    PerftestCollect       @2
+    PerftestClose         @3
+    GetPerformanceData    @4
+    ChangePerformanceData @5
+SECTIONS
+    SharedData READ WRITE SHARED

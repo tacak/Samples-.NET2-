@@ -1,0 +1,4 @@
+
+・パフォーマンス拡張 DLL の作成
+< http://msdn.microsoft.com/ja-jp/library/cc366099.aspx >
+

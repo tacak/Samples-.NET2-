@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MockTest2.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:MockTest2.Moles.MTestClass1">
+            <summary>Mole type of <see cref="T:MockTest2.TestClass1"/>
+            .</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass1.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass1.#ctor(MockTest2.TestClass1)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass1.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass1.Constructor">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass1.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass1.TestFunc1Int32">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass1.TestFunc1(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:MockTest2.Moles.MTestClass1.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass1.AllInstances.TestFunc1Int32">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass1.TestFunc1(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:MockTest2.Moles.MTestClass2">
+            <summary>Mole type of <see cref="T:MockTest2.TestClass2"/>
+            .</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass2.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass2.#ctor(MockTest2.TestClass2)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass2.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MockTest2.Moles.MTestClass2.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass2.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass2.Constructor">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass2.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass2.TestFunc2Int32">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass2.TestFunc2(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:MockTest2.Moles.MTestClass2.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:MockTest2.Moles.MTestClass2.AllInstances.TestFunc2Int32">
+            <summary>Sets the mole of <see cref="M:MockTest2.TestClass2.TestFunc2(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:MockTest2.Moles.STestClass1">
+            <summary>Stub type of <see cref="T:MockTest2.TestClass1"/>
+            .</summary>
+        </member>
+        <member name="M:MockTest2.Moles.STestClass1.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MockTest2.Moles.STestClass1.InitializeStub">
+            <summary>Initializes a new instance of type STestClass1</summary>
+        </member>
+        <member name="P:MockTest2.Moles.STestClass1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MockTest2.Moles.STestClass1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:MockTest2.Moles.STestClass2">
+            <summary>Stub type of <see cref="T:MockTest2.TestClass2"/>
+            .</summary>
+        </member>
+        <member name="M:MockTest2.Moles.STestClass2.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MockTest2.Moles.STestClass2.InitializeStub">
+            <summary>Initializes a new instance of type STestClass2</summary>
+        </member>
+        <member name="P:MockTest2.Moles.STestClass2.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MockTest2.Moles.STestClass2.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>

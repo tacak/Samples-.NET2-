@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenameMovie", "RenameMovie\RenameMovie.csproj", "{783C7412-19C9-44AD-A324-D1CB4E4616CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{783C7412-19C9-44AD-A324-D1CB4E4616CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783C7412-19C9-44AD-A324-D1CB4E4616CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783C7412-19C9-44AD-A324-D1CB4E4616CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783C7412-19C9-44AD-A324-D1CB4E4616CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

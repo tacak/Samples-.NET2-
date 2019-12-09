@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis"/>
+<TITLE>ATL 8.0 のオブジェクト テスト ページ TestCtl</TITLE>
+
+<script LANGUAGE="JavaScript" FOR="TestCtl" EVENT="TestEvent()">
+alert("TestEvent を受信しました");
+</script> 
+
+
+</HEAD>
+<BODY>
+
+
+<OBJECT ID="TestCtl" CLASSID="CLSID:7A6A1B0B-3BAE-4BDF-BE3B-50C424DFE29D"></OBJECT>
+<br /><br />
+<INPUT TYPE="button" VALUE="TestFunc メソッドを呼ぶ" ONCLICK="javascript:document.TestCtl.TestFunc();" />
+
+
+</BODY>
+</HTML>

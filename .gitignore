@@ -1,0 +1,7 @@
+*.suo
+*.sdf
+ipch/
+Release/
+Debug/
+obj/
+bin/

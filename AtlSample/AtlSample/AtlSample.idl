@@ -1,0 +1,47 @@
+// AtlSample.idl : AtlSample の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (AtlSample.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5BA748F0-77DE-40F4-9A6A-282DBE01631D),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITestCtl : IDispatch{
+	[id(1)] HRESULT TestFunc(void);
+};
+
+[
+	uuid(4F1752D1-4B70-4775-BB0F-EC34B37CC895),
+	version(1.0),
+]
+library AtlSampleLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(7BAFF0A0-6AD2-4A63-B163-D76470DBF7FE)		
+	]
+	dispinterface _ITestCtlEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(BE432B54-C53E-4049-AABF-108D6EED9A83),		
+		control
+	]
+	coclass TestCtl
+	{
+		[default] interface ITestCtl;
+		[default, source] dispinterface _ITestCtlEvents;
+	};
+};
+

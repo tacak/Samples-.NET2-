@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RenameMovie">
+</Property><Property Name="ソリューション ファイル" Value="E:\My.NETProjects\RenameMovie\RenameMovie.sln">
+</Property><Property Name="Date" Value="2010年8月7日">
+</Property><Property Name="Time" Value="20:02">
+</Property><Property Name="ログ番号" Value="2">
+</Property></Properties><Event ErrorLevel="1" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="このプロジェクトは .NET Framework 2.0 または 3.0 に対応しています。プロジェクトで新しい .NET Framework を必要とするアセンブリを使用すると、ビルドに失敗します。[プロジェクト] メニューの [プロパティ] をクリックし、[.NET Framework] ボックスの一覧で新しいバージョンを選択することにより、.NET Framework のバージョンを変更できます。Visual Basic では、これは [コンパイル] タブの [詳細コンパイラ オプション] ボタンをクリックすると表示されます。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RenameMovie.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="RenameMovie.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="スキャンが完了しました: プロジェクト ファイルにアップグレードは必要ありません。">
+</Event></UpgradeLog>

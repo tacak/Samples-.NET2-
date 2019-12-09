@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ebe8c6fb-0192-4cb9-9e95-0ca6afdb5630" name="TacaK@TACAK-PC 2012-03-29 23:29:48" runUser="TacaK-PC\TacaK" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="ローカル" id="214b49c9-8d3d-4aba-9570-7324cd6279d4">
+    <Description>これらはローカル テスト実行用の既定のテスト設定です。</Description>
+    <Deployment enabled="false" runDeploymentRoot="TacaK_TACAK-PC 2012-03-29 23_29_48">
+      <DeploymentItem filename="E:\My.NETProjects\MockTest2\MockTest2\bin\Debug\MockTest2.dll" />
+      <DeploymentItem filename="E:\My.NETProjects\MockTest2\TestProject1\MolesAssemblies\MockTest2.Moles.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-29T23:29:48.2321826+09:00" queuing="2012-03-29T23:29:48.2821826+09:00" start="2012-03-29T23:29:48.2821826+09:00" finish="2012-03-29T23:29:51.2221868+09:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="e:\my.netprojects\mocktest2\testproject1\bin\debug\testproject1.dll" id="59863143-3238-122e-4d8a-637b491cc755">
+      <Execution id="d259f3ed-60c5-45b0-896b-1056e341252e" />
+      <TestMethod codeBase="E:/My.NETProjects/MockTest2/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.UnitTest1, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59863143-3238-122e-4d8a-637b491cc755" executionId="d259f3ed-60c5-45b0-896b-1056e341252e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d259f3ed-60c5-45b0-896b-1056e341252e" testId="59863143-3238-122e-4d8a-637b491cc755" testName="TestMethod1" computerName="TACAK-PC" duration="00:00:00.1042482" startTime="2012-03-29T23:29:48.2921827+09:00" endTime="2012-03-29T23:29:50.9121863+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d259f3ed-60c5-45b0-896b-1056e341252e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

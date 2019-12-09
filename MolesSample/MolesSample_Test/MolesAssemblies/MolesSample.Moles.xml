@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MolesSample.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:MolesSample.Moles.MGreeting">
+            <summary>Mole type of <see cref="T:MolesSample.Greeting"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreeting.#ctor(MolesSample.Greeting)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreeting.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreeting.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreeting.Bind(MolesSample.IGreeting)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MGreeting.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MGreeting.Constructor">
+            <summary>Sets the mole of <see cref="M:MolesSample.Greeting.#ctor"/>
+            </summary>
+        </member>
+        <member name="T:MolesSample.Moles.MGreeting.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:MolesSample.Moles.MGreetingFactory">
+            <summary>Mole type of <see cref="T:MolesSample.GreetingFactory"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreetingFactory.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreetingFactory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MGreetingFactory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MGreetingFactory.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MGreetingFactory.CreateMorning">
+            <summary>Sets the mole of <see cref="M:MolesSample.GreetingFactory.CreateMorning"/>
+            </summary>
+        </member>
+        <member name="T:MolesSample.Moles.MMorning">
+            <summary>Mole type of <see cref="T:MolesSample.Morning"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MMorning.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MMorning.#ctor(MolesSample.Morning)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MMorning.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MMorning.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:MolesSample.Moles.MMorning.Bind(MolesSample.IGreeting)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MMorning.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MMorning.Constructor">
+            <summary>Sets the mole of <see cref="M:MolesSample.Morning.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:MolesSample.Moles.MMorning.GreetString">
+            <summary>Sets the mole of <see cref="M:MolesSample.Morning.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:MolesSample.Moles.MMorning.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:MolesSample.Moles.MMorning.AllInstances.GreetString">
+            <summary>Sets the mole of <see cref="M:MolesSample.Morning.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:MolesSample.Moles.SGreeting">
+            <summary>Stub type of <see cref="T:MolesSample.Greeting"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.SGreeting.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MolesSample.Moles.SGreeting.Greet(System.String)">
+            <summary>Sets the stub of <see cref="M:MolesSample.Greeting.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:MolesSample.Moles.SGreeting.GreetString">
+            <summary>Sets the stub of <see cref="M:MolesSample.Greeting.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:MolesSample.Moles.SGreeting.InitializeStub">
+            <summary>Initializes a new instance of type SGreeting</summary>
+        </member>
+        <member name="P:MolesSample.Moles.SGreeting.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MolesSample.Moles.SGreeting.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:MolesSample.Moles.SIGreeting">
+            <summary>Stub type of <see cref="T:MolesSample.IGreeting"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.SIGreeting.#ctor">
+            <summary>Initializes a new instance of type SIGreeting</summary>
+        </member>
+        <member name="F:MolesSample.Moles.SIGreeting.GreetString">
+            <summary>Sets the stub of <see cref="M:MolesSample.IGreeting.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:MolesSample.Moles.SIGreeting.ms::MolesSample#IGreeting#Greet(System.String)">
+            <summary>Sets the stub of <see cref="M:MolesSample.IGreeting.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:MolesSample.Moles.SMorning">
+            <summary>Stub type of <see cref="T:MolesSample.Morning"/>
+            .</summary>
+        </member>
+        <member name="M:MolesSample.Moles.SMorning.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MolesSample.Moles.SMorning.Greet(System.String)">
+            <summary>Sets the stub of <see cref="M:MolesSample.Morning.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="F:MolesSample.Moles.SMorning.GreetString">
+            <summary>Sets the stub of <see cref="M:MolesSample.Morning.Greet(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:MolesSample.Moles.SMorning.InitializeStub">
+            <summary>Initializes a new instance of type SMorning</summary>
+        </member>
+        <member name="P:MolesSample.Moles.SMorning.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MolesSample.Moles.SMorning.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>

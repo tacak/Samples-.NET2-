@@ -1,0 +1,48 @@
+// AtlTest.idl : AtlTest の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (AtlTest.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(D5357EA2-A70C-4173-BF8E-80B51334B67E),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITestCtl : IDispatch{
+	[id(1)] HRESULT TestFunc(void);
+};
+
+[
+	uuid(D189236A-6B6F-4F71-930F-DABFC507DB3D),
+	version(1.0),
+]
+library AtlTestLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(69305E88-5229-45B0-8BD1-C6410AD25014)		
+	]
+	dispinterface _ITestCtlEvents
+	{
+		properties:
+		methods:
+			[id(1)] HRESULT TestEvent(void);
+	};
+	[
+		uuid(7A6A1B0B-3BAE-4BDF-BE3B-50C424DFE29D),		
+		control
+	]
+	coclass TestCtl
+	{
+		[default] interface ITestCtl;
+		[default, source] dispinterface _ITestCtlEvents;
+	};
+};
+

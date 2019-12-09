@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RenameMovie">
+</Property><Property Name="ソリューション ファイル" Value="E:\My.NETProject\RenameMovie\RenameMovie.sln">
+</Property><Property Name="ユーザー オプション ファイル" Value="E:\My.NETProject\RenameMovie\RenameMovie.suo">
+</Property><Property Name="Date" Value="2009年9月19日">
+</Property><Property Name="Time" Value="22:12">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RenameMovie.sln" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie.sln としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="" Source="RenameMovie.suo" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie.suo としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="プロジェクト ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\RenameMovie.csproj としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Form1.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Form1.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Form1.Designer.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Form1.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Program.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Program.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Properties\AssemblyInfo.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Properties\AssemblyInfo.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Properties\Resources.Designer.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Properties\Resources.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Properties\Settings.Designer.cs" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Properties\Settings.Designer.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Properties\Settings.settings" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Properties\Settings.settings としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Form1.resx" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Form1.resx としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\Properties\Resources.resx" Description="ファイルは正常に E:\My.NETProject\RenameMovie\Backup\RenameMovie\Properties\Resources.resx としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RenameMovie.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="RenameMovie.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RenameMovie" Source="RenameMovie\RenameMovie.csproj" Description="スキャンが完了しました: プロジェクト ファイルにアップグレードは必要ありません。">
+</Event></UpgradeLog>
