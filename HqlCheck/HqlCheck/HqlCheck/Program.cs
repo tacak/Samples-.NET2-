@@ -189,7 +189,10 @@ namespace HqlCheck
 
             for (Match m = reg.Match(hqlString); m.Success; m = m.NextMatch())
             {
-                tableList.Add(m.Groups["name"].Value);
+                string tname = m.Groups["name"].Value;
+                if (!tableList.Contains(tname)) {
+                    tableList.Add(tname);
+                }
             }
 
             return tableList;
