@@ -6,11 +6,15 @@ using System.Text;
 using Renci.SshNet;
 using System.Text.RegularExpressions;
 using System.Reflection;
+using NLog;
+using NLog.Config;
 
 namespace HqlCheck
 {
     class Program
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         static void Main(string[] args)
         {
             // 引数チェック
@@ -21,6 +25,11 @@ namespace HqlCheck
                 Console.WriteLine("[テーブルチェックフラグ]は、任意。0-テーブルチェックしない 1-テーブルチェックする(デフォルト)");
                 return;
             }
+
+            // ロガー設定
+            logger.Factory.Configuration.Variables.Add("dt", DateTime.Now.ToString("yyyyMMddHHmmss"));
+            logger.Factory.Configuration.Variables.Add("hqlfile", args[0]);
+            logger.Factory.ReconfigExistingLoggers();
 
             // テーブルチェックフラグの設定
             bool tableCheckFlg = true;
@@ -40,12 +49,12 @@ namespace HqlCheck
             if (!ssh.IsConnected)
             {
                 // 接続に失敗した
-                Console.WriteLine("SSH接続に失敗しました");
+                logger.Error("SSH接続に失敗");
                 return;
             }
 
             // 接続に成功した
-            Console.WriteLine("SSH接続しました");
+            logger.Info("SSH接続に成功");
 
             // Prefixを取得する
             string prefix = ConfigurationManager.AppSettings["Prefix"];
@@ -64,21 +73,21 @@ namespace HqlCheck
                 // DDLテンプレートのパス
                 string templatePath = Directory.GetParent(Assembly.GetExecutingAssembly().Location).ToString() + "\\ddl_template";
 
-                Console.WriteLine("■テーブルの存在チェック");
                 foreach (string tableName in tableList)
                 {
                     // テーブル名にprefixを追加
-                    Console.Write(prefix + tableName + " : ");
+                    logger.Info(prefix + tableName + " テーブルの存在チェックを開始");
 
                     // 実行コマンド組み立て
                     string commandString = "hive -e \"desc " + prefix + tableName + "\"";
+
                     // コマンド実行
                     CommandResult cr = executeCommand(ssh, commandString);
 
                     // テーブルがなかったら作成
                     if (cr.stdErr.Contains("Table not found"))
                     {
-                        Console.WriteLine("テーブルが存在しないため作成します");
+                        logger.Info(prefix + tableName + " テーブルが存在しないため作成");
 
                         // テンプレート読込
                         sr = new StreamReader(templatePath + "\\create_DEVXX_" + tableName + ".sql", Encoding.GetEncoding("UTF-8"));
@@ -96,15 +105,16 @@ namespace HqlCheck
                         // 戻り値確認してテーブル作成に失敗していたらエラー終了
                         if(cr.resultCd != 0)
                         {
-                            Console.WriteLine(prefix + tableName + "テーブルの作成に失敗しました");
-                            Console.WriteLine(cr.stdErr);
+                            logger.Error(prefix + tableName + " テーブルの作成に失敗");
+                            logger.Error(cr.stdErr);
 
                             return;
                         }
+                        logger.Info(prefix + tableName + " テーブルの作成に成功");
                     }
                     else
                     {
-                        Console.WriteLine("OK");
+                        logger.Info(prefix + tableName + " テーブルが存在するため作成処理をスキップ");
                     }
                 }
             }
@@ -113,13 +123,14 @@ namespace HqlCheck
             string hqlString = hqlStringOrg.Replace(":PRE_", prefix);
             hqlString = hqlString.Replace(":pt", "20200102030000");
 
+            // :p1～:p20,:p01～:p20を置換
             for (int i = 0; i < 20; i++)
             {
                 hqlString = hqlString.Replace(String.Format(":p{0}", i), i.ToString());
                 hqlString = hqlString.Replace(String.Format(":p{0:00}", i), i.ToString());
             }
 
-            Console.WriteLine("■HQL実行");
+            logger.Info("メインHQLの実行開始");
 
             // HQL実行コマンド組み立て
             string hiveCommandString = "hive -e \"" + hqlString + "\"";
@@ -127,16 +138,15 @@ namespace HqlCheck
             // コマンド実行
             CommandResult result = executeCommand(ssh, hiveCommandString);
 
-            Console.WriteLine("■実行結果");
-            Console.WriteLine("戻り値：");
-            Console.WriteLine(result.resultCd);
-            Console.WriteLine();
-            Console.WriteLine("出力：");
-            Console.WriteLine(result.stdOut);
-            Console.WriteLine(result.stdErr);
+            logger.Info("メインHQL_戻値: " + result.resultCd);
+
+            string logmsg = result.stdOut + result.stdErr;
+            logger.Info("メインHQL_出力: " + logmsg.Trim());
 
             // 接続終了
             ssh.Disconnect();
+
+            logger.Info("SSH切断");
         }
 
         static ConnectionInfo createConnectionInfo()
@@ -161,11 +171,16 @@ namespace HqlCheck
                 }
             );
 
+            string logmsg = String.Format("{0}:{1} {2}/*****", hostNameOrIpAddr, portNo, userName);
+            logger.Info("ConnectionInfo: " + logmsg);
+
             return info;
         }
 
         static CommandResult executeCommand(SshClient ssh, string commandString)
         {
+            logger.Debug("executeCommand:" + commandString);
+
             // コマンドを作成する
             SshCommand cmd = ssh.CreateCommand(commandString);
 
@@ -193,6 +208,7 @@ namespace HqlCheck
                 string tname = m.Groups["name"].Value;
                 if (!tableList.Contains(tname)) {
                     tableList.Add(tname);
+                    logger.Debug("TableList:" + tname);
                 }
             }
 
