@@ -71,7 +71,7 @@ namespace HqlCheck
                     Console.Write(prefix + tableName + " : ");
 
                     // 実行コマンド組み立て
-                    string commandString = "hive -e 'desc " + prefix + tableName + "'";
+                    string commandString = "hive -e \"desc " + prefix + tableName + "\"";
                     // コマンド実行
                     CommandResult cr = executeCommand(ssh, commandString);
 
@@ -88,7 +88,9 @@ namespace HqlCheck
                         ddlString = ddlString.Replace("DEVXX_", prefix);
 
                         // テーブル作成コマンド組み立て
-                        commandString = "hive -e '" + ddlString + "'";
+                        commandString = "hive -e \"" + ddlString + "\"";
+
+                        Console.WriteLine(ddlString);
 
                         // コマンド実行
                         cr = executeCommand(ssh, commandString);
@@ -97,6 +99,7 @@ namespace HqlCheck
                         if(cr.resultCd != 0)
                         {
                             Console.WriteLine(prefix + tableName + "テーブルの作成に失敗しました");
+                            Console.WriteLine(cr.stdErr);
 
                             return;
                         }
@@ -121,7 +124,7 @@ namespace HqlCheck
             Console.WriteLine("■HQL実行");
 
             // HQL実行コマンド組み立て
-            string hiveCommandString = "hive -e '" + hqlString + "'";
+            string hiveCommandString = "hive -e \"" + hqlString + "\"";
 
             // コマンド実行
             CommandResult result = executeCommand(ssh, hiveCommandString);
