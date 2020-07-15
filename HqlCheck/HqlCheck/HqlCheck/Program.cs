@@ -90,8 +90,6 @@ namespace HqlCheck
                         // テーブル作成コマンド組み立て
                         commandString = "hive -e \"" + ddlString + "\"";
 
-                        Console.WriteLine(ddlString);
-
                         // コマンド実行
                         cr = executeCommand(ssh, commandString);
 
